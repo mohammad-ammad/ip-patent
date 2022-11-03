@@ -1,0 +1,48 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+.main video{
+width: 100%;
+height: 100%;
+object-fit: cover;
+position: absolute;
+z-index: -1;
+top: 0;
+left: 0;
+}
+.form-video-bg{
+    width: 100%;
+    height: 165vh;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+.mint-video-bg{
+    width: 100%;
+    height: 110vh;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+.market-video-bg{
+    width: 100%;
+    height: 220vh;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+@media only screen and (max-width: 768px) {
+    
+      .form-video-bg{
+        height: 110vh;
+      }
+    
+  }
+ 

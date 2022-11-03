@@ -1,0 +1,13 @@
+.main{
+width: 100%;
+height: 100vh;
+}
+.main video{
+width: 100%;
+height: 100%;
+object-fit: cover;
+position: absolute;
+z-index: -1;
+top: 0;
+left: 0;
+}
