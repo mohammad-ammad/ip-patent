@@ -74,6 +74,8 @@ const MintingPage = () => {
     }
   };
 
+  let metadata = {}
+
   const handleCreateMetadata = async (pdfHash) => {
     const { name, imgUrl } = formInput;
     if (!name || !imgUrl) {
@@ -81,7 +83,7 @@ const MintingPage = () => {
       return;
     }
 
-    const metadata = {
+    metadata = {
       name: name,
       image: imgUrl,
       pdf: pdfHash,
@@ -109,7 +111,6 @@ const MintingPage = () => {
         .then((res) => {
           mintItem(`https://gateway.pinata.cloud/ipfs/${res.data.IpfsHash}`);
           setMintingStatus(false);
-          mintFunc(metadata,formInput.quantity)
           console.log("minting handleMeta Data responseeee", res);
         })
         .catch((err) => {
@@ -142,7 +143,8 @@ const MintingPage = () => {
           transaction
             .wait()
             .then((tx) => {
-              console.log("Minting call response :",tx);
+              console.log("Minting call response :",tx['events'][2]['args']['id']);
+              mintFunc(metadata,formInput.quantity,tx['events'][2]['args']['id'])
               toast.info(tx);
               setMintingStatus(false);
             })

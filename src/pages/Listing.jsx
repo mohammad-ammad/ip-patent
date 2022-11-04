@@ -1,4 +1,4 @@
-import React, { useState,useContext } from "react";
+import React, { useState, useContext } from "react";
 import logo from "../assets/mini_1.png";
 import BgVideo from "../assets/bkg/warp.mp4";
 
@@ -14,24 +14,25 @@ import car from "../assets/car.jpg"
 import { utils } from "ethers/lib";
 import InputForm from "./InputForm";
 import { MoraliContext } from "../context/MoralisContext";
+import { InstanceContext } from "../context/InstanceContext";
+import { useEffect } from "react";
+import UnListedModel from "../Components/UnListedModel";
 
 
 const List = () => {
-const {Moralisresult}=useContext(MoraliContext);
-function NameParser(data) 
-  {
+  const { Moralisresult } = useContext(MoraliContext);
+  function NameParser(data) {
     return JSON.parse(data)?.name;
   }
-function ImageParser(data)
-{
-  return JSON.parse(data)?.image;
-} 
+  function ImageParser(data) {
+    return JSON.parse(data)?.image;
+  }
   const [formInput, setFormInput] = useState([{
-    
+
     price: "",
     amount: "",
   }]);
- 
+
   const FormHandler = (e) => {
     // setFormInput([...formInput,{price:"",amount:""}])
     setFormInput({
@@ -44,14 +45,13 @@ function ImageParser(data)
   const [uploading, setUploading] = useState(false);
   const [deployAddress, setDeployAddress] = useState("");
 
-  const ListingNFT = async (event,id) => {
+  const ListingNFT = async (event, id) => {
     event.preventDefault();
-    console.log("specefic token id",id)
+    console.log("specefic token id", id)
     if (
       formInput.amount !== "" ||
       formInput.price !== ""
-    )
-    {
+    ) {
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const signer = provider.getSigner();
       console.log("Listing Signer:", signer);
@@ -62,12 +62,12 @@ function ImageParser(data)
       );
       console.log("Listing Contract:", contract);
       let EtherPrice = utils.parseEther("100");
-      console.log("Price in ethers:",EtherPrice);
-      let wei=EtherPrice.toString(10);
-      console.log("in weis:",wei)
+      console.log("Price in ethers:", EtherPrice);
+      let wei = EtherPrice.toString(10);
+      console.log("in weis:", wei)
       toast.promise(
         contract
-          .list(id, EtherPrice,formInput.amount)
+          .list(id, EtherPrice, formInput.amount)
           .then((transaction) => {
             toast.promise(
               transaction
@@ -91,7 +91,7 @@ function ImageParser(data)
           pending: "Waiting to Sign Listing...",
           success: "Listing Signed... 👌",
           error: "Listing Rejected 🤯",
-          
+
         }
       );
       //   contract
@@ -115,18 +115,35 @@ function ImageParser(data)
       //         }
       //       );
       //     }).catch((err)=>console.log("errorrr:",err))
-          
+
       //   // {
       //   //   pending: "Waiting to Sign Listing...",
       //   //   success: "Listing Signed... 👌",
       //   //   error: "Listing Rejected 🤯",
-          
+
       //   // }
       // );
     } else {
       toast.warn("Please fill the feilds!");
     }
   };
+
+  //----USECONTEXT
+  const { unListedNFT, unlisted, address } = useContext(InstanceContext)
+  const [showModal, setShowModal] = useState(false);
+  const [data, setData] = useState([]);
+
+  //---USEEFFECT
+  useEffect(() => {
+    unListedNFT()
+  }, [address])
+
+  //---open model
+  const openModel = (item) => 
+  {
+    setData(item)
+    setShowModal(true)
+  }
 
   return (
     <>
@@ -138,68 +155,57 @@ function ImageParser(data)
             <div className="bg-black border-2  border-[#FF0000]  text-[#B87333] test-3xl font-semibold tracking-wide pt-4 pb-3 px-12 rounded-full -mt-8 mb-8">
               List NFT
             </div>
-            </div>
-            {/* grid */}
+          </div>
+          {/* grid */}
           <div className="p-2  grid sm:grid-cols-1 justify-center md:grid-cols-3 lg:grid-cols-3 gap-1 ">
-           {
-            Moralisresult.map((item)=>
-            <div className="text-white mb-8  mx-4 shadow-lg border border-[#B87333] hover:scale-105 p-4  rounded-xl"> 
-            <img className="w-full lg:h-[300px] md:h-[300px] sm:h-[350px] rounded-xl" src={ImageParser(item.metadata)} alt=""/>
-            
-            <div className="flex justify-between">
-                <span className="inline-block text-white  rounded-full  py-1 text-sm font-semibold   mb-1">
-                  Quantity 
-                </span>
-                <span className="inline-block text-white rounded-full  py-1 text-sm font-semibold   mb-1">
-                  {item.amount} 
-                </span>
-               
-              </div>
+            {
+              unlisted.length > 0 ?
+              unlisted.map((item) =>
+                <div className="text-white mb-8  mx-4 shadow-lg border border-[#B87333] hover:scale-105 p-4  rounded-xl">
+                  <img className="w-full lg:h-[300px] md:h-[300px] sm:h-[350px] rounded-xl" src={item.image_url} alt="" />
+                  <div className="p-2">
+                    <h1 className="text-md font-semibold">{item.name}</h1>
+                  </div>
 
-            <div className="flex justify-between  mb-1">
-          
-                  <lable>Price</lable>
-                <input
-                      className=" px-2 w-[20%] text-white bg-transparent "
-                      type="number"
-                      name="price"
-                      value={formInput.price}
-                      onChange={(e)=>FormHandler(e)}
-                      // placeholder="id like 0,1,2.."
-                    />
-                  <lable>Amount</lable>
-                <input
-                      className=" px-2 w-[20%] text-white bg-transparent "
-                      type="number"
-                      name="amount"
-                      value={formInput.amount}
-                      onChange={FormHandler}
-                      // placeholder="id like 0,1,2.."
-                    />
-               
-              </div>
-              <div className="">
+                  <div className="flex justify-start px-2">
+                    <span className="inline-block text-white  rounded-full text-sm font-semibold mb-1 mr-2">
+                      Quantity:
+                    </span>
+                    <span className="inline-block text-white rounded-full text-sm font-semibold mb-1">
+                      {item.quantity}
+                    </span>
+
+                  </div>
+
+                  <div className="flex justify-start px-2">
+                    <span className="inline-block text-white  rounded-full text-sm font-semibold mb-1 mr-2">
+                      Owner:
+                    </span>
+                    <span className="inline-block text-white rounded-full text-sm font-semibold mb-1">
+                    {item.wallet.slice(0,6)}...{item.wallet.slice(36)}
+                    </span>
+
+                  </div>
+
+                  <div className="my-2">
                     <div className="m-auto flex w-full justify-center bg-[#B87333]  hover:bg-[#c07229]">
                       {/* <Link to={`/detail/${item.token_id}`}>  */}
                       <button
                         className="text-lg text-white font-semibold m-auto"
-                        //   onClick={sendFileToIPFS}
-                        onClick={event=>ListingNFT(event,item.token_id)}
+                        onClick={()=>openModel(item)}
                       >
                         List
                       </button>
                     </div>
                   </div>
-             </div>)
-}
-              </div>
+                </div>)
+                : ''
+            }
+          </div>
 
-            </div>
-            </div>
-    
-
-     
-      
+        </div>
+      </div>
+      <UnListedModel showModal={showModal} setShowModal={setShowModal} data={data}/>
       <Footer />
     </>
   );
