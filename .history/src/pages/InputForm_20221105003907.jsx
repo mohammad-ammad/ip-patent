@@ -881,7 +881,7 @@ const InputForm = () => {
                         is prior art)
                       </p>
                     </div>
-                    <div className=" flex flex-col sm:justify-center md:justify-start   lg:px-14 pb-2">
+                    <div className=" flex flex-col sm:justify-center md:justify-start   lg:px-16 pb-2">
                       <textarea
                         cols="10"
                         rows="5"
@@ -898,7 +898,7 @@ const InputForm = () => {
                     <p className="flex  justify-start lg:px-14  md:px-0 px-0     font-bold text-sm mb-1">
                       Add Comments
                     </p>
-                    <div className=" flex flex-col sm:justify-center md:justify-start mx-0   lg:px-14 pb-2">
+                    <div className=" flex flex-col sm:justify-center md:justify-start mx-0 pr-2  lg:px-16 pb-2">
                       <textarea
                         cols="5"
                         rows="5"

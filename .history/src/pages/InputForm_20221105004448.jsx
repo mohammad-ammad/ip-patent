@@ -697,7 +697,7 @@ const InputForm = () => {
                     <p className="flex  justify-start  md:px-16 lg:px-14  font-bold text-sm mb-1">
                       Do you own the patentrights?:
                     </p>
-                    <div className=" flex md:justify-center lg:justify-center  sm:justify-start  pb-2 ">
+                    <div className=" flex md:justify-center lg:justify-start  sm:justify-start  pb-2 ">
                       <select
                         className="py-2 md:w-[84%] w-full lg:w-[84%]  px-2 text-white  border bg-[#5C0000]  rounded-sm"
                         onChange={HandlerForm}

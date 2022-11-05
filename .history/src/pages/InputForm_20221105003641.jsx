@@ -881,7 +881,7 @@ const InputForm = () => {
                         is prior art)
                       </p>
                     </div>
-                    <div className=" flex flex-col sm:justify-center md:justify-start   lg:px-14 pb-2">
+                    <div className=" flex flex-col sm:justify-center md:justify-start   lg:px-16 pb-2">
                       <textarea
                         cols="10"
                         rows="5"
@@ -898,11 +898,11 @@ const InputForm = () => {
                     <p className="flex  justify-start lg:px-14  md:px-0 px-0     font-bold text-sm mb-1">
                       Add Comments
                     </p>
-                    <div className=" flex flex-col sm:justify-center md:justify-start mx-0   lg:px-14 pb-2">
+                    <div className=" flex flex-col sm:justify-center md:justify-start   lg:px-16 pb-2">
                       <textarea
                         cols="5"
                         rows="5"
-                        className="py-2 px-2  w-full  text-white  border border-gray-400 rounded-sm bg-[#5C0000]"
+                        className="py-2 px-1  w-full  text-white  border border-gray-400 rounded-sm bg-[#5C0000]"
                         name="comments"
                         value={inputForm.comments}
                         onChange={HandlerForm}
