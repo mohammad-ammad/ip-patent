@@ -162,6 +162,9 @@ const InputForm = () => {
                   Your patent collection:
                 </label>
                 <label className="text-lg text-gray-400">
+                  {/* {window.localStorage.key(address) === address
+                    ? localStorage.getItem(address)
+                    : count} */}
                   {count}
                 </label>
               </div>
@@ -176,7 +179,7 @@ const InputForm = () => {
               <div class="flex justify-center  flex-col">
                 {nextPreState == 0 ? (
                   <>
-                    <p className="flex justify-start lg:px-14 md:px-16 px-0   mb-1  font-bold text-sm ">
+                    <p className="flex sm:justify-center md:justify-start  md:px-16 lg:px-16  font-bold text-sm ">
                       For your name, use the name on your driver’s license or
                       other permanent documentation.
                     </p>
@@ -218,7 +221,7 @@ const InputForm = () => {
                   </>
                 ) : nextPreState == 1 ? (
                   <>
-                    <p className="flex  justify-start  md:px-16 lg:px-16  font-bold text-sm mb-1 ">
+                    <p className="flex sm:justify-center md:justify-start  md:px-16 lg:px-16  font-bold text-sm  ">
                       Contact info.
                     </p>
                     <div className=" flex md:justify-center lg:justify-center  sm:justify-start pb-2">
@@ -254,7 +257,7 @@ const InputForm = () => {
                   </>
                 ) : nextPreState == 2 ? (
                   <>
-                    <p className="flex  justify-start  md:px-16 lg:px-16  font-bold text-sm mb-1  ">
+                    <p className="flex sm:justify-center md:justify-start  md:px-16 lg:px-16  font-bold text-sm ">
                       Login Info.
                     </p>
                     <div className=" flex md:justify-center lg:justify-center  sm:justify-start pb-2">
@@ -280,7 +283,7 @@ const InputForm = () => {
                   </>
                 ) : nextPreState == 3 ? (
                   <>
-                    <p className="flex  justify-start  md:px-16 lg:px-16  font-bold text-sm mb-1 ">
+                    <p className="flex sm:justify-center md:justify-start  md:px-16 lg:px-16  font-bold text-sm">
                       Your location .
                     </p>
                     <div className=" flex md:justify-center lg:justify-center  sm:justify-start  pb-2 ">
@@ -574,7 +577,7 @@ const InputForm = () => {
                   </>
                 ) : nextPreState == 4 ? (
                   <>
-                    <p className="flex  justify-start  md:px-16 lg:px-16  font-bold text-sm mb-1 ">
+                    <p className="flex sm:justify-center md:justify-start  md:px-16 lg:px-16  font-bold text-sm ">
                       Birthday.
                     </p>
                     <div className=" flex md:justify-center lg:justify-center  sm:justify-start  pb-2 ">
@@ -590,7 +593,7 @@ const InputForm = () => {
                   </>
                 ) : nextPreState == 5 ? (
                   <>
-                    <p className="flex justify-start lg:px-14 md:px-16 px-0   mb-1  font-bold text-sm">
+                    <p className="flex sm:justify-center md:justify-start  md:px-16 lg:px-16  font-bold text-sm">
                       Do you have a trademark?:
                       <br></br>If you have thought of a brand name (trademark)
                       to call it (such as “Easy Seat”), do not use it anywhere
@@ -615,7 +618,7 @@ const InputForm = () => {
                 ) : nextPreState == 6 ? (
                   <>
                     <div>
-                      <p className="flex justify-start lg:px-14 md:px-16 px-0     font-bold text-sm">
+                      <p className="flex sm:justify-center  md:justify-start lg:justify-start  lg:px-16  font-bold text-sm">
                         Is it a goods or a service? Please check the Class list
                         definitions:
                         <a
@@ -629,7 +632,7 @@ const InputForm = () => {
                       </p>
                     </div>
                     <div>
-                      <p className="flex justify-start lg:px-14 md:px-16 px-0   mb-1  font-bold text-sm">
+                      <p className="flex sm:justify-center  md:justify-start lg:justify-start  lg:px-16  font-bold text-sm">
                         Choose 46 if nothing similar in list.
                       </p>
                     </div>
@@ -694,7 +697,7 @@ const InputForm = () => {
                   </>
                 ) : nextPreState == 7 ? (
                   <>
-                    <p className="flex  justify-start  md:px-16 lg:px-14  font-bold text-sm mb-1">
+                    <p className="flex sm:justify-center md:justify-start  md:px-16 lg:px-16  font-bold text-sm">
                       Do you own the patentrights?:
                     </p>
                     <div className=" flex md:justify-center lg:justify-center  sm:justify-start  pb-2 ">
@@ -713,7 +716,7 @@ const InputForm = () => {
                   </>
                 ) : nextPreState == 8 ? (
                   <>
-                    <p className="flex  justify-start  md:px-16 lg:px-16  font-bold text-sm mb-1 ">
+                    <p className="flex sm:justify-center md:justify-start  md:px-16 lg:px-16  font-bold text-sm ">
                       Insert very brief generic title; example – Seating Device:
                     </p>
                     <div className=" flex flex-col sm:justify-center md:justify-start  md:px-16 lg:px-16 pb-2">
@@ -725,7 +728,7 @@ const InputForm = () => {
                         type="text"
                         placeholder="Insert very brief generic title; example – Seating Device"
                       />
-                      <p className="flex flex-col sm:justify-center md:justify-start  mt-1 mb-1  font-bold text-sm ">
+                      <p className="flex flex-col sm:justify-center md:justify-start    font-bold text-sm ">
                         What is the purpose of your Invention?:
                       </p>
                       <textarea
@@ -741,7 +744,7 @@ const InputForm = () => {
                   </>
                 ) : nextPreState == 9 ? (
                   <>
-                    <p className="flex  justify-start  md:px-16 lg:px-16  font-bold text-sm mb-1 ">
+                    <p className="flex sm:justify-center md:justify-start  md:px-16 lg:px-16  font-bold text-sm ">
                       What is the purpose of your Invention?:
                     </p>
                     <div className=" flex flex-col sm:justify-center md:justify-start  md:px-16 lg:px-16 pb-2">
@@ -753,7 +756,7 @@ const InputForm = () => {
                         type="text"
                         placeholder="1 to 5 words description of the purpose of your invention"
                       />
-                      <p className="flex flex-col sm:justify-center md:justify-start  mt-1 mb-1  font-bold text-sm ">
+                      <p className="flex flex-col sm:justify-center md:justify-start    font-bold text-sm ">
                         explain why this invention is needed; what is currently
                         lacking in this field
                       </p>
@@ -770,7 +773,7 @@ const InputForm = () => {
                   </>
                 ) : nextPreState == 10 ? (
                   <>
-                    <p className="flex  justify-start  md:px-16 lg:px-16  font-bold text-sm mb-1  ">
+                    <p className="flex sm:justify-center md:justify-start  md:px-16 lg:px-16  font-bold text-sm ">
                       what are the Features of your invention?:
                     </p>
                     <div className=" flex flex-col sm:justify-center md:justify-start  md:px-16 lg:px-16 pb-2">
@@ -795,7 +798,7 @@ const InputForm = () => {
                   </>
                 ) : nextPreState == 11 ? (
                   <>
-                    <p className="flex  justify-start  md:px-16 lg:px-16  font-bold text-sm mb-1 ">
+                    <p className="flex sm:justify-center md:justify-start  md:px-16 lg:px-16  font-bold text-sm ">
                       Alternative Embodiments:
                     </p>
                     <div className=" flex flex-col sm:justify-center md:justify-start  md:px-16 lg:px-16 pb-2">
@@ -820,7 +823,7 @@ const InputForm = () => {
                   </>
                 ) : nextPreState == 12 ? (
                   <>
-                    <p className="flex  justify-start  md:px-16 lg:px-16  font-bold text-sm ">
+                    <p className="flex sm:justify-center md:justify-start  md:px-16 lg:px-16  font-bold text-sm ">
                       Are there related patents to this one?:
                     </p>
                     <div className=" flex flex-col sm:justify-center md:justify-start  md:px-16 lg:px-16 pb-2">
@@ -837,7 +840,7 @@ const InputForm = () => {
                   </>
                 ) : nextPreState == 13 ? (
                   <>
-                    <p className="flex  justify-start  md:px-16 lg:px-16  font-bold text-sm mb-1 ">
+                    <p className="flex sm:justify-center md:justify-start  md:px-16 lg:px-16  font-bold text-sm ">
                       Operation, Function and Use of Invention:
                     </p>
                     <div className=" flex flex-col sm:justify-center md:justify-start  md:px-16 lg:px-16 pb-2">
@@ -863,10 +866,10 @@ const InputForm = () => {
                 ) : nextPreState == 14 ? (
                   <>
                     <div>
-                      <p className="flex  justify-start lg:px-14  md:px-0 px-0     font-bold text-sm">
+                      <p className="flex sm:justify-center  md:justify-start lg:justify-start  lg:px-16  font-bold text-sm">
                         Known Prior Patents or Published Applications:
                         <a
-                          className=" flex text-sm   text-[#5C0000] "
+                          className="   text-[#5C0000]"
                           href="https://patents.justia.com/"
                           target="blank"
                         >
@@ -876,7 +879,7 @@ const InputForm = () => {
                       </p>
                     </div>
                     <div>
-                      <p className="flex justify-start lg:px-14 md:px-0 px-0     font-bold text-sm mb-1">
+                      <p className="flex sm:justify-center  md:justify-start lg:justify-start  lg:px-16  font-bold text-sm">
                         using several keywords in your search to verify if there
                         is prior art)
                       </p>
@@ -895,7 +898,7 @@ const InputForm = () => {
                   </>
                 ) : nextPreState == 15 ? (
                   <>
-                    <p className="flex  justify-start lg:px-14  md:px-0 px-0     font-bold text-sm mb-1">
+                    <p className="flex sm:justify-center  md:justify-start lg:justify-start  lg:px-16  font-bold text-sm">
                       Add Comments
                     </p>
                     <div className=" flex flex-col sm:justify-center md:justify-start   lg:px-16 pb-2">
@@ -944,7 +947,7 @@ const InputForm = () => {
                   </>
                 ) : (
                   <button
-                    className="text-lg font-semibold  bg-[#5C0000] md:w-[10%] lg:w-[10%] lg:mt-0 md:mt-0 mt-2 w-full py-2  mr-14"
+                    className="text-lg font-semibold  bg-[#5C0000] w-[10%] py-2 mr-14 "
                     onClick={Next}
                   >
                     Next

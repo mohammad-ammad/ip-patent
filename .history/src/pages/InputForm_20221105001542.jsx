@@ -863,7 +863,7 @@ const InputForm = () => {
                 ) : nextPreState == 14 ? (
                   <>
                     <div>
-                      <p className="flex  justify-start lg:px-14  md:px-0 px-0     font-bold text-sm">
+                      <p className="flex  justify-start lg:px-14  md:px-16 px-0     font-bold text-sm">
                         Known Prior Patents or Published Applications:
                         <a
                           className=" flex text-sm   text-[#5C0000] "

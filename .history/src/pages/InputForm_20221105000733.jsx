@@ -863,10 +863,10 @@ const InputForm = () => {
                 ) : nextPreState == 14 ? (
                   <>
                     <div>
-                      <p className="flex  justify-start lg:px-14  md:px-0 px-0     font-bold text-sm">
+                      <p className="flex  justify-start lg:px-14 xl:px-0 md:px-16 px-0     font-bold text-sm">
                         Known Prior Patents or Published Applications:
                         <a
-                          className=" flex text-sm   text-[#5C0000] "
+                          className="   text-[#5C0000]"
                           href="https://patents.justia.com/"
                           target="blank"
                         >
@@ -876,7 +876,7 @@ const InputForm = () => {
                       </p>
                     </div>
                     <div>
-                      <p className="flex justify-start lg:px-14 md:px-0 px-0     font-bold text-sm mb-1">
+                      <p className="flex justify-start lg:px-14 md:px-16 px-0     font-bold text-sm mb-1">
                         using several keywords in your search to verify if there
                         is prior art)
                       </p>
@@ -895,7 +895,7 @@ const InputForm = () => {
                   </>
                 ) : nextPreState == 15 ? (
                   <>
-                    <p className="flex  justify-start lg:px-14  md:px-0 px-0     font-bold text-sm mb-1">
+                    <p className="flex sm:justify-center  md:justify-start lg:justify-start  lg:px-16  font-bold text-sm">
                       Add Comments
                     </p>
                     <div className=" flex flex-col sm:justify-center md:justify-start   lg:px-16 pb-2">

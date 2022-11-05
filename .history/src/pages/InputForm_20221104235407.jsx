@@ -694,7 +694,7 @@ const InputForm = () => {
                   </>
                 ) : nextPreState == 7 ? (
                   <>
-                    <p className="flex  justify-start  md:px-16 lg:px-14  font-bold text-sm mb-1">
+                    <p className="flex  justify-start  md:px-16 lg:px-16  font-bold text-sm mb-1">
                       Do you own the patentrights?:
                     </p>
                     <div className=" flex md:justify-center lg:justify-center  sm:justify-start  pb-2 ">
@@ -713,7 +713,7 @@ const InputForm = () => {
                   </>
                 ) : nextPreState == 8 ? (
                   <>
-                    <p className="flex  justify-start  md:px-16 lg:px-16  font-bold text-sm mb-1 ">
+                    <p className="flex sm:justify-center md:justify-start  md:px-16 lg:px-16  font-bold text-sm ">
                       Insert very brief generic title; example – Seating Device:
                     </p>
                     <div className=" flex flex-col sm:justify-center md:justify-start  md:px-16 lg:px-16 pb-2">
@@ -725,7 +725,7 @@ const InputForm = () => {
                         type="text"
                         placeholder="Insert very brief generic title; example – Seating Device"
                       />
-                      <p className="flex flex-col sm:justify-center md:justify-start  mt-1 mb-1  font-bold text-sm ">
+                      <p className="flex flex-col sm:justify-center md:justify-start    font-bold text-sm ">
                         What is the purpose of your Invention?:
                       </p>
                       <textarea
@@ -741,7 +741,7 @@ const InputForm = () => {
                   </>
                 ) : nextPreState == 9 ? (
                   <>
-                    <p className="flex  justify-start  md:px-16 lg:px-16  font-bold text-sm mb-1 ">
+                    <p className="flex sm:justify-center md:justify-start  md:px-16 lg:px-16  font-bold text-sm ">
                       What is the purpose of your Invention?:
                     </p>
                     <div className=" flex flex-col sm:justify-center md:justify-start  md:px-16 lg:px-16 pb-2">
@@ -753,7 +753,7 @@ const InputForm = () => {
                         type="text"
                         placeholder="1 to 5 words description of the purpose of your invention"
                       />
-                      <p className="flex flex-col sm:justify-center md:justify-start  mt-1 mb-1  font-bold text-sm ">
+                      <p className="flex flex-col sm:justify-center md:justify-start    font-bold text-sm ">
                         explain why this invention is needed; what is currently
                         lacking in this field
                       </p>
@@ -770,7 +770,7 @@ const InputForm = () => {
                   </>
                 ) : nextPreState == 10 ? (
                   <>
-                    <p className="flex  justify-start  md:px-16 lg:px-16  font-bold text-sm mb-1  ">
+                    <p className="flex sm:justify-center md:justify-start  md:px-16 lg:px-16  font-bold text-sm ">
                       what are the Features of your invention?:
                     </p>
                     <div className=" flex flex-col sm:justify-center md:justify-start  md:px-16 lg:px-16 pb-2">
@@ -795,7 +795,7 @@ const InputForm = () => {
                   </>
                 ) : nextPreState == 11 ? (
                   <>
-                    <p className="flex  justify-start  md:px-16 lg:px-16  font-bold text-sm mb-1 ">
+                    <p className="flex sm:justify-center md:justify-start  md:px-16 lg:px-16  font-bold text-sm ">
                       Alternative Embodiments:
                     </p>
                     <div className=" flex flex-col sm:justify-center md:justify-start  md:px-16 lg:px-16 pb-2">
@@ -820,7 +820,7 @@ const InputForm = () => {
                   </>
                 ) : nextPreState == 12 ? (
                   <>
-                    <p className="flex  justify-start  md:px-16 lg:px-16  font-bold text-sm ">
+                    <p className="flex sm:justify-center md:justify-start  md:px-16 lg:px-16  font-bold text-sm ">
                       Are there related patents to this one?:
                     </p>
                     <div className=" flex flex-col sm:justify-center md:justify-start  md:px-16 lg:px-16 pb-2">
@@ -837,7 +837,7 @@ const InputForm = () => {
                   </>
                 ) : nextPreState == 13 ? (
                   <>
-                    <p className="flex  justify-start  md:px-16 lg:px-16  font-bold text-sm mb-1 ">
+                    <p className="flex sm:justify-center md:justify-start  md:px-16 lg:px-16  font-bold text-sm ">
                       Operation, Function and Use of Invention:
                     </p>
                     <div className=" flex flex-col sm:justify-center md:justify-start  md:px-16 lg:px-16 pb-2">
@@ -863,10 +863,10 @@ const InputForm = () => {
                 ) : nextPreState == 14 ? (
                   <>
                     <div>
-                      <p className="flex  justify-start lg:px-14  md:px-0 px-0     font-bold text-sm">
+                      <p className="flex sm:justify-center  md:justify-start lg:justify-start  lg:px-16  font-bold text-sm">
                         Known Prior Patents or Published Applications:
                         <a
-                          className=" flex text-sm   text-[#5C0000] "
+                          className="   text-[#5C0000]"
                           href="https://patents.justia.com/"
                           target="blank"
                         >
@@ -876,7 +876,7 @@ const InputForm = () => {
                       </p>
                     </div>
                     <div>
-                      <p className="flex justify-start lg:px-14 md:px-0 px-0     font-bold text-sm mb-1">
+                      <p className="flex sm:justify-center  md:justify-start lg:justify-start  lg:px-16  font-bold text-sm">
                         using several keywords in your search to verify if there
                         is prior art)
                       </p>
@@ -895,7 +895,7 @@ const InputForm = () => {
                   </>
                 ) : nextPreState == 15 ? (
                   <>
-                    <p className="flex  justify-start lg:px-14  md:px-0 px-0     font-bold text-sm mb-1">
+                    <p className="flex sm:justify-center  md:justify-start lg:justify-start  lg:px-16  font-bold text-sm">
                       Add Comments
                     </p>
                     <div className=" flex flex-col sm:justify-center md:justify-start   lg:px-16 pb-2">

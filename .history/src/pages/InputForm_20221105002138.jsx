@@ -574,7 +574,7 @@ const InputForm = () => {
                   </>
                 ) : nextPreState == 4 ? (
                   <>
-                    <p className="flex  justify-start  md:px-16 lg:px-16  font-bold text-sm mb-1 ">
+                    <p className="flex  justify-start  md:px-0 lg:px-16  font-bold text-sm mb-1 ">
                       Birthday.
                     </p>
                     <div className=" flex md:justify-center lg:justify-center  sm:justify-start  pb-2 ">
