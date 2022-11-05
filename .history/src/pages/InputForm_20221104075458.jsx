@@ -63,35 +63,35 @@ const InputForm = () => {
   const validation = () => 
   {
     if(
-    inputForm.gender!=""&&
-    inputForm.first_name!=""&&
-    inputForm.last_name!=""&&
-    inputForm.metamask!=""&&
-    inputForm.email!=""&&
-    inputForm.phone!=""&&
-    inputForm.username!=""&&
-    inputForm.user_password!=""&&
-    inputForm.country!=""&&
-    inputForm.city!=""&&
-    inputForm.address!=""&&
-    inputForm.zip_code!=""&&
-    inputForm.dob!=""&&
-    inputForm.trade_mark!=""&&
-    inputForm.good_bad_review!=""&&
-    inputForm.is_have_patent!=""&&
-    inputForm.generic_title!=""&&
-    inputForm.purpose!=""&&
-    inputForm.purpose_invention!=""&&
-    inputForm.brif_general_discrp!=""&&
-    inputForm.features_invention!=""&&
-    inputForm.features_general_discrp!=""&&
-    inputForm.alternative_embod!=""&&
-    inputForm.alternative_general_discrp!=""&&
-    inputForm.is_related_patents!=""&&
-    inputForm.useof_invention!=""&&
-    inputForm.useof_invention_discrp!=""&&
-    inputForm.known_prior_patents!=""&&
-    inputForm.comments!=""
+    gender!=""&&
+    first_name!=""&&
+    last_name!=""&&
+    metamask!=""&&
+    email!=""&&
+    phone!=""&&
+    username!=""&&
+    user_password!=""&&
+    country!=""&&
+    city!=""&&
+    address!=""&&
+    zip_code!=""&&
+    dob!=""&&
+    trade_mark!=""&&
+    good_bad_review!=""&&
+    is_have_patent!=""&&
+    generic_title!=""&&
+    purpose!=""&&
+    purpose_invention!=""&&
+    brif_general_discrp!=""&&
+    features_invention!=""&&
+    features_general_discrp!=""&&
+    alternative_embod!=""&&
+    alternative_general_discrp!=""&&
+    is_related_patents!=""&&
+    useof_invention!=""&&
+    useof_invention_discrp!=""&&
+    known_prior_patents!=""&&
+    comments!=""
     )
     {
       return true
@@ -840,7 +840,7 @@ What is the purpose of your Invention?:</p>
                   <>
                   <button 
                    className="text-lg font-semibold  bg-[#5C0000] md:w-[10%] lg:w-[10%] lg:mt-0 md:mt-0 mt-2 w-full py-2  mr-14 "
-                   onClick={(e)=>createFileFunc(e)}
+                   onClick={Next}
                  >
                    Submit
                  </button>
